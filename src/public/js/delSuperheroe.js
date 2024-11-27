@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       // Obtener el ID del superhéroe a eliminar
-      const id = button.getAttribute("data-id"); 
+      const id = button.getAttribute("data-id");
       console.log("ID del superhéroe a eliminar:", id);
 
       //Usar SweetAlert para preguntar si el usuario está seguro de eliminar
@@ -33,10 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
                   icon: "success",
                   title: "Superhéroe eliminado con éxito",
                   showConfirmButton: false,
-                  timer: 3500,
+                  timer: 2200,
                 });
                 // Recargar la página después de la eliminación
-                window.location.reload();
+                setTimeout(() => {
+                  window.location.reload();
+                }, 2200);
               } else {
                 Swal.fire({
                   toast: true,
