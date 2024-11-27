@@ -1,0 +1,185 @@
+<div class="container form-container">
+  <h1 class="titulo-form">Agregar Superhéroe</h1>
+  <form action="" method="POST" id="superhero-form">
+    <div class="row">
+      <!-- Nombre del Superhéroe -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="nombreSuperHeroe">Nombre del Superhéroe</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombreSuperHeroe"
+          name="nombreSuperHeroe"
+          required
+        />
+        <div id="nombreSuperHeroeError" class="text-danger"></div>
+      </div>
+
+      <!-- Nombre Real -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="nombreReal">Nombre Real</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombreReal"
+          name="nombreReal"
+          required
+        />
+        <div id="nombreRealError" class="text-danger"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Nombre de la Sociedad -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="nombreSociedad">Nombre de la Sociedad</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nombreSociedad"
+          name="nombreSociedad"
+          required
+        />
+        <div id="nombreSociedadError" class="text-danger"></div>
+      </div>
+
+      <!-- Edad -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="edad">Edad</label>
+        <input
+          type="number"
+          class="form-control"
+          id="edad"
+          name="edad"
+          min="1"
+          required
+        />
+        <div id="edadError" class="text-danger"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Planeta de Origen -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="planetaOrigen">Planeta de Origen</label>
+        <input
+          type="text"
+          class="form-control"
+          id="planetaOrigen"
+          name="planetaOrigen"
+          required
+        />
+        <div id="nombrePlanetaError" class="text-danger"></div>
+      </div>
+
+      <!-- Debilidad -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="debilidad">Debilidad</label>
+        <input
+          type="text"
+          class="form-control"
+          id="debilidad"
+          name="debilidad"
+          required
+        />
+        <div id="debilidadError" class="text-danger"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Poderes -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="poderes">Poderes</label>
+        <input
+          type="text"
+          class="form-control"
+          id="poderes"
+          name="poderes"
+          placeholder="Poder1, Poder2"
+          required
+        />
+        <small class="form-text text-muted"
+          >Separe los poderes con comas.</small
+        >
+        <div id="poderesError" class="text-danger"></div>
+      </div>
+
+      <!-- Habilidad Especial -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="habilidadEspecial">Habilidad Especial</label>
+        <input
+          type="text"
+          class="form-control"
+          id="habilidadEspecial"
+          name="habilidadEspecial"
+          required
+        />
+        <div id="habilidadEspecialError" class="text-danger"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Aliados -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="aliados">Aliados</label>
+        <input
+          type="text"
+          class="form-control"
+          id="aliados"
+          name="aliados"
+          placeholder="Aliado1, Aliado2"
+          required
+        />
+        <small class="form-text text-muted"
+          >Separe los aliados con comas.</small
+        >
+        <div id="aliadosError" class="text-danger"></div>
+      </div>
+
+      <!-- Enemigos -->
+      <div class="col-md-6 form-group mb-3">
+        <label for="enemigos">Enemigos</label>
+        <input
+          type="text"
+          class="form-control"
+          id="enemigos"
+          name="enemigos"
+          placeholder="Enemigo1, Enemigo2"
+          required
+        />
+        <small class="form-text text-muted"
+          >Separe los enemigos con comas.</small
+        >
+        <div id="enemigosError" class="text-danger"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Creador -->
+      <div class="col-md-12 form-group mb-3">
+        <label for="creador">Creador</label>
+        <input
+          type="text"
+          class="form-control"
+          id="creador"
+          name="creador"
+          value="Uriel Sebastián Summonte"
+        />
+      </div>
+    </div>
+
+    <!-- Botón para enviar el formulario -->
+    <button type="submit" class="btn-submit">Agregar Superhéroe</button>
+    <!-- Botón de Cancelar -->
+    <button
+      type="button"
+      class="btn-cancel"
+      id="cancel-btn"
+      style="float: right"
+    >
+      Cancelar Acción
+    </button>
+  </form>
+  <script src="/js/addSuperheroe.js"></script>
+  <script src="/js/validaciones.js"></script>
+</div>

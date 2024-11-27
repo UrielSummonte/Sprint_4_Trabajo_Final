@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <!-- Formulario de búsqueda -->
+  <div class="mb-4 mt-4">
+    <form id="formBusqueda" class="d-flex justify-content-center gap-1">
+      <input
+        type="text"
+        id="nombreBusqueda"
+        class="form-control w-50"
+        placeholder="Busca un nombre de superhéroe"
+        required
+      />
+      <button type="submit" class="btn btn-primary ml-2">Buscar</button>
+    </form>
+  </div>
+
+  <!-- Contenedor para el resultado de la búsqueda -->
+  <div id="resultadoBusqueda" class="mb-4"></div>
+
+    <div>
+      <h1 class="text-center mb-4 titulo-listado">Listado de Superhéroes</h1>
+    </div>
+    <div class="row">
+      <% superheroes.forEach((superheroe, index) => { %>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-lg" style="border: 2px solid #007bff; border-radius: 10px;">
+            <!-- Título de la tarjeta -->
+            <div class="card-header text-center" style="background-color: #007bff; color: white;">
+              <h4 class="card-title font-weight-bold" style="text-transform: uppercase;"><%= superheroe.nombreSuperHeroe %></h4>
+            </div>
+            <!-- Cuerpo de la tarjeta -->
+            <div class="card-body flex-grow-1" style="background-color: #f8f9fa;">
+              <p><strong>Nombre real:</strong> <%= superheroe.nombreReal %></p>
+              <p><strong>Sociedad:</strong> <%= superheroe.nombreSociedad %></p>
+              <p><strong>Edad:</strong> <%= superheroe.edad %></p>
+              <p><strong>Planeta de origen:</strong> <%= superheroe.planetaOrigen %></p>
+              <p><strong>Debilidad:</strong> <%= superheroe.debilidad %></p>
+              <p><strong>Poderes:</strong> <%= superheroe.poderes %></p>
+              <p><strong>Habilidad especial:</strong> <%= superheroe.habilidadEspecial %></p>
+              <p><strong>Aliados:</strong> <%= superheroe.aliados %></p>
+              <p><strong>Enemigos:</strong> <%= superheroe.enemigos %></p>
+              <p><strong>Creador:</strong> <%= superheroe.creador %></p>
+            </div>
+            <!-- Pie de la tarjeta con botones -->
+            <div class="card-footer d-flex justify-content-between align-items-center" style="background-color: #ffcc00;">
+              <a href="/api/heroes/<%= superheroe._id %>" class="btn btn-primary btn-edit" style="width: 45%;">Editar</a>
+              <button
+                class="btn btn-danger btn-delete"
+                data-id="<%= superheroe._id %>"
+                style="width: 45%;"
+              >
+                Eliminar
+              </button>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+  <script src="/js/delSuperheroe.js"></script>
+  <script src="/js/searchSuperheroe.js"></script>
+  
